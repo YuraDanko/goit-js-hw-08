@@ -1,0 +1,56 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    display: inline-block;
+}
+
+a {
+    text-decoration: none;
+}  
+
+.gallery{
+    display: grid;
+    grid-template-columns: repeat(3, 360px);
+    gap: 24px;
+    height: auto;
+    margin: 0 auto;
+}
+
+.gallery-item {
+    width: 360px;
+    height: 200px;
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.3s ;
+}
+
+.gallery-item:hover {
+    transform: scale(1.03);
+}
+
+.gallery-link {
+    display: block;
+}
+
+.gallery-image {
+    width: 100%;
+    /* Зображення заповнює весь блок */
+    height: 100%;
+    /* Зображення заповнює висоту блоку */
+    display: block;
+    /* Прибирає нижній відступ для зображення */
+    object-fit: cover;
+    /* Зберігає пропорції і приховує частини, що виходять за межі блоку */
+}
